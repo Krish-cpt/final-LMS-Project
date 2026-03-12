@@ -1,16 +1,19 @@
-import React, { useState, useEffect } from 'react'
-import { Link, useNavigate } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
+import React, { useState, useEffect } from 'react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 export default function Navbar() {
   const [user, setUser] = useState(null);
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const storedUser = localStorage.getItem('user');
-    if (storedUser) {
-      setUser(JSON.parse(storedUser));
-    }
+    if (storedUser) setUser(JSON.parse(storedUser));
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   const handleLogout = () => {
@@ -20,75 +23,84 @@ export default function Navbar() {
     navigate('/login');
   };
 
+  const isActive = (path) => location.pathname === path;
+
   return (
-    <div>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
-        <div className="container-fluid">
-          <img src="/lms.jpg" alt="logo" style={{ width: 60, height: 50 }} />
-          <a className="navbar-brand" href="#">Course Management</a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <Link className="nav-link" to="/">Home</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/Mycourses">MyCourses</Link>
-              </li>
-
-              {/* Show these only when NOT logged in */}
-              {!user && (
-                <>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/login">Login</Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/signup">Signup</Link>
-                  </li>
-                </>
-              )}
-
-              {/* Show these only when logged in */}
-              {user && (
-                <>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/dashboard">Dashboard</Link>
-                  </li>
-                </>
-              )}
-            </ul>
-
-            {/* Right side — profile + logout */}
-            {user && (
-              <div className="d-flex align-items-center gap-3">
-                <img
-                  src={`https://ui-avatars.com/api/?name=${user.name}&size=35&background=0d6efd&color=fff`}
-                  alt="avatar"
-                  style={{ borderRadius: "50%", width: 35, height: 35 }}
-                />
-                <span className="fw-bold">Hi, {user.name}!</span>
-                <button
-                  className="btn btn-outline-danger btn-sm"
-                  onClick={handleLogout}
-                >
-                  Logout
-                </button>
-              </div>
-            )}
-          </div>
+    <nav style={{
+      position: 'sticky', top: 0, zIndex: 1000,
+      background: scrolled ? 'rgba(15,15,26,0.97)' : 'rgba(15,15,26,0.85)',
+      backdropFilter: 'blur(20px)',
+      borderBottom: '1px solid rgba(233,69,96,0.15)',
+      padding: '0 40px',
+      height: '70px',
+      display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+      transition: 'all 0.3s ease',
+      boxShadow: scrolled ? '0 4px 30px rgba(0,0,0,0.4)' : 'none'
+    }}>
+      {/* Logo */}
+      <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '12px', textDecoration: 'none' }}>
+        <div style={{
+          width: 42, height: 42, borderRadius: '10px', overflow: 'hidden',
+          border: '2px solid rgba(233,69,96,0.5)', flexShrink: 0
+        }}>
+          <img src="/lms.jpg" alt="logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
         </div>
-      </nav>
-    </div>
+        <span style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800, fontSize: '18px', letterSpacing: '0.5px' }}>
+          Course<span style={{ color: '#e94560' }}>Hub</span>
+        </span>
+      </Link>
+
+      {/* Center Links */}
+      <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+        {[{ to: '/', label: 'Home' }, { to: '/Mycourses', label: 'My Courses' }, ...(user ? [{ to: '/dashboard', label: 'Dashboard' }] : [])].map(link => (
+          <Link key={link.to} to={link.to} style={{
+            padding: '8px 18px', borderRadius: '8px', fontSize: '14px', fontWeight: 500,
+            color: isActive(link.to) ? '#fff' : '#999',
+            background: isActive(link.to) ? 'rgba(233,69,96,0.15)' : 'transparent',
+            borderBottom: isActive(link.to) ? '2px solid #e94560' : '2px solid transparent',
+            transition: 'all 0.2s', textDecoration: 'none'
+          }}>{link.label}</Link>
+        ))}
+      </div>
+
+      {/* Right Side */}
+      <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+        {!user ? (
+          <>
+            <Link to="/login" style={{
+              padding: '8px 20px', borderRadius: '8px', fontSize: '14px', fontWeight: 500,
+              color: '#ccc', border: '1px solid rgba(255,255,255,0.1)',
+              background: 'transparent', transition: 'all 0.2s', textDecoration: 'none'
+            }}>Login</Link>
+            <Link to="/signup" style={{
+              padding: '8px 20px', borderRadius: '8px', fontSize: '14px', fontWeight: 600,
+              color: '#fff', background: '#e94560', textDecoration: 'none',
+              boxShadow: '0 4px 15px rgba(233,69,96,0.4)', transition: 'all 0.2s'
+            }}>Sign Up</Link>
+          </>
+        ) : (
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+            <div style={{ textAlign: 'right' }}>
+              <div style={{ fontSize: '13px', fontWeight: 600, color: '#fff' }}>Hi, {user.name}!</div>
+              <div style={{ fontSize: '11px', color: '#666' }}>Student</div>
+            </div>
+            <img
+              src={`https://ui-avatars.com/api/?name=${user.name}&size=40&background=e94560&color=fff&bold=true`}
+              alt="avatar"
+              style={{ width: 40, height: 40, borderRadius: '50%', border: '2px solid #e94560', cursor: 'pointer' }}
+              onClick={() => navigate('/dashboard')}
+            />
+            <button onClick={handleLogout} style={{
+              padding: '8px 16px', borderRadius: '8px', fontSize: '13px', fontWeight: 500,
+              color: '#e94560', background: 'transparent', border: '1px solid rgba(233,69,96,0.4)',
+              transition: 'all 0.2s'
+            }}
+              onMouseOver={e => { e.target.style.background = '#e94560'; e.target.style.color = '#fff'; }}
+              onMouseOut={e => { e.target.style.background = 'transparent'; e.target.style.color = '#e94560'; }}
+            >Logout</button>
+          </div>
+        )}
+      </div>
+    </nav>
   );
 }
