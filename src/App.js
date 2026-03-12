@@ -5,27 +5,24 @@ import Login from './pages/Login';
 import Mycourses from './pages/Mycourses';
 import Signup from './pages/Signup';
 import Coursedetail from './pages/Coursedetail';
-
+import Dashboard from './pages/Dashboard';
 
 import './App.css';
-
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <Navbar/>
-      <Routes>
-        <Route path ="/" element={<Home/>}/>
-        <Route path ="/Login" element={<Login/>}/>
-        <Route path ="/Mycourses" element={<Mycourses/>}/>
-        <Route path ="/Signup" element={<Signup/>}/>
-        <Route path="/Coursedetail/:id" element={<Coursedetail/>}/>
-        
-      </Routes>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/mycourses" element={<Mycourses />} />
+          <Route path="/Coursedetail/:id" element={<Coursedetail />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+        </Routes>
       </BrowserRouter>
-
-     
     </div>
   );
 }
