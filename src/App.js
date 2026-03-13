@@ -6,7 +6,6 @@ import Mycourses from './pages/Mycourses';
 import Signup from './pages/Signup';
 import Coursedetail from './pages/Coursedetail';
 import Dashboard from './pages/Dashboard';
-
 import './App.css';
 
 function App() {

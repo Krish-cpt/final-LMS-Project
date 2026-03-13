@@ -1,6 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800;900&family=DM+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800;900&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Space+Mono:wght@400;700&display=swap');
 
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 :root {
   --red: #e94560;
@@ -21,17 +25,43 @@ body {
   color: var(--white);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
   font-weight: 900;
+  font-style: normal;
 }
 
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #1a1a2e; }
-::-webkit-scrollbar-thumb { background: #e94560; border-radius: 3px; }
+p, span, div, li, a {
+  font-style: normal;
+}
 
-a { text-decoration: none; }
-button { font-family: var(--font-body); cursor: pointer; }
-input, textarea { font-family: var(--font-body); }
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #1a1a2e;
+}
+::-webkit-scrollbar-thumb {
+  background: #e94560;
+  border-radius: 3px;
+}
+
+a {
+  text-decoration: none;
+  font-style: normal;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  font-style: normal;
+}
+
+input, textarea, select {
+  font-family: var(--font-body);
+  font-style: normal;
+}
