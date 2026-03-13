@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Coursecard } from '../components/Coursecard';
+import API from '../api';
 
 export default function Home() {
   const [courses, setCourses] = useState([]);
@@ -8,9 +9,8 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/courses")
-      .then(res => res.json())
-      .then(data => { setCourses(data); setLoading(false); })
+    API.get('/courses')
+      .then(res => { setCourses(res.data); setLoading(false); })
       .catch(err => { console.log(err); setLoading(false); });
   }, []);
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import API from "../Services/api";
+import API from "../api";
 
 export default function Dashboard() {
   const [user, setUser] = useState(null);
@@ -217,8 +217,6 @@ export default function Dashboard() {
                     <div style={{ padding: '20px' }}>
                       <h5 style={{ fontFamily: "'Syne', sans-serif", color: '#fff', fontSize: '15px', fontWeight: 700, marginBottom: '6px' }}>{course.title}</h5>
                       <p style={{ color: '#555', fontSize: '13px', marginBottom: '16px' }}>{course.instructor}</p>
-
-                      {/* Progress bar */}
                       <div style={{ marginBottom: '16px' }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '6px' }}>
                           <span style={{ color: '#555', fontSize: '12px' }}>Progress</span>
@@ -232,7 +230,6 @@ export default function Dashboard() {
                           }} />
                         </div>
                       </div>
-
                       <Link to={`/Coursedetail/${course.id}`} style={{
                         display: 'block', textAlign: 'center', padding: '10px', borderRadius: '10px',
                         background: progress === 100 ? 'rgba(34,197,94,0.1)' : 'rgba(233,69,96,0.1)',

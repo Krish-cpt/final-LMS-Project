@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import API from "../Services/api";
+import API from "../api";
 
 function Login() {
   const [formData, setFormData] = useState({ email: "", password: "" });
@@ -37,7 +37,6 @@ function Login() {
         background: 'linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%)',
         padding: '60px', position: 'relative', overflow: 'hidden'
       }}>
-        {/* Big decorative circle */}
         <div style={{
           position: 'absolute', top: -150, right: -150,
           width: 500, height: 500, borderRadius: '50%',
