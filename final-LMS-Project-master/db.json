@@ -1,0 +1,378 @@
+{
+"courses": [
+{
+"id": 1,
+"title": "React for Beginners",
+"instructor": "John Doe",
+"duration": "6 Weeks",
+"level": "Beginner",
+"thumbnail": "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+"video": "https://www.youtube.com/embed/Ke90Tje7VS0",
+"description": "Learn the fundamentals of React.js and build dynamic user interfaces.",
+"lessons": [
+"Introduction to React",
+"Setting up React Environment",
+"JSX and Rendering",
+"Components and Props",
+"State and Lifecycle",
+"React Hooks",
+"Event Handling",
+"Mini React Project"
+]
+},
+{
+"id": 2,
+"title": "Java Full Stack Development",
+"instructor": "Jane Smith",
+"duration": "8 Weeks",
+"level": "Intermediate",
+"thumbnail": "https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg",
+"video": "https://www.youtube.com/embed/9sg7Fbnx4GI",
+"description": "Build full stack applications using Java, Spring Boot, React, and MySQL.",
+"lessons": [
+"Full Stack Overview",
+"Frontend Basics",
+"Java Fundamentals",
+"Spring Boot Introduction",
+"REST API Development",
+"Database Integration",
+"Authentication",
+"Project Deployment"
+]
+},
+{
+"id": 3,
+"title": "Python for Data Science",
+"instructor": "Michael Johnson",
+"duration": "10 Weeks",
+"level": "Beginner",
+"thumbnail": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
+"video": "https://www.youtube.com/embed/8DvywoWv6fI",
+"description": "Use Python libraries like NumPy and Pandas for data analysis.",
+"lessons": [
+"Python Basics",
+"Data Structures",
+"NumPy Fundamentals",
+"Pandas Data Analysis",
+"Data Cleaning",
+"Data Visualization",
+"Exploratory Data Analysis",
+"Mini Data Project"
+]
+},
+{
+"id": 4,
+"title": "Machine Learning Fundamentals",
+"instructor": "Emily Davis",
+"duration": "12 Weeks",
+"level": "Intermediate",
+"thumbnail": "https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg",
+"video": "https://www.youtube.com/embed/GwIo3gDZCVQ",
+"description": "Understand core machine learning algorithms and predictive models.",
+"lessons": [
+"Introduction to ML",
+"Data Preprocessing",
+"Regression Algorithms",
+"Classification Algorithms",
+"Decision Trees",
+"Clustering",
+"Model Evaluation",
+"ML Project"
+]
+},
+{
+"id": 5,
+"title": "Advanced JavaScript",
+"instructor": "David Wilson",
+"duration": "7 Weeks",
+"level": "Advanced",
+"thumbnail": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+"video": "https://www.youtube.com/embed/PoRJizFvM7s",
+"description": "Deep dive into modern JavaScript including async programming.",
+"lessons": [
+"Closures",
+"Scope and Hoisting",
+"Promises",
+"Async Await",
+"ES6 Modules",
+"Array Methods",
+"Design Patterns",
+"Project"
+]
+},
+{
+"id": 6,
+"title": "UI UX Design Fundamentals",
+"instructor": "Sophia Brown",
+"duration": "5 Weeks",
+"level": "Beginner",
+"thumbnail": "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg",
+"video": "https://www.youtube.com/embed/FTFaQWZBqQ8",
+"description": "Learn user research, wireframing and prototyping using Figma.",
+"lessons": [
+"UX Basics",
+"User Research",
+"Wireframing",
+"Prototyping",
+"Design Principles",
+"Usability Testing"
+]
+},
+{
+"id": 7,
+"title": "Deep Learning with TensorFlow",
+"instructor": "Daniel Martinez",
+"duration": "9 Weeks",
+"level": "Advanced",
+"thumbnail": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Tensorflow_logo.svg",
+"video": "https://www.youtube.com/embed/tPYj3fFJGjk",
+"description": "Build neural network models using TensorFlow.",
+"lessons": [
+"Neural Networks",
+"TensorFlow Setup",
+"Deep Neural Networks",
+"CNN Models",
+"RNN Models",
+"Model Optimization",
+"AI Project"
+]
+},
+{
+"id": 8,
+"title": "SQL and Database Management",
+"instructor": "Olivia Anderson",
+"duration": "6 Weeks",
+"level": "Beginner",
+"thumbnail": "https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png",
+"video": "https://www.youtube.com/embed/HXV3zeQKqGY",
+"description": "Learn SQL queries and relational databases.",
+"lessons": [
+"Database Concepts",
+"SQL Basics",
+"CRUD Operations",
+"Joins",
+"Indexes",
+"Optimization"
+]
+},
+{
+"id": 9,
+"title": "Node.js Backend Development",
+"instructor": "Chris Taylor",
+"duration": "7 Weeks",
+"level": "Intermediate",
+"thumbnail": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg",
+"video": "https://www.youtube.com/embed/Oe421EPjeBE",
+"description": "Build backend APIs using Node.js and Express.",
+"lessons": [
+"Node Basics",
+"Express Framework",
+"REST APIs",
+"Authentication",
+"Database Integration",
+"API Security",
+"Project"
+]
+},
+{
+"id": 10,
+"title": "Spring Boot for Beginners",
+"instructor": "Amit Kumar",
+"duration": "6 Weeks",
+"level": "Beginner",
+"thumbnail": "https://upload.wikimedia.org/wikipedia/commons/7/79/Spring_Boot.svg",
+"video": "https://www.youtube.com/embed/9SGDpanrc8U",
+"description": "Build backend applications using Spring Boot.",
+"lessons": [
+"Spring Basics",
+"Spring Boot Setup",
+"REST APIs",
+"Database Integration",
+"Security",
+"Project"
+]
+},
+{
+"id": 11,
+"title": "Angular Complete Guide",
+"instructor": "Sarah Wilson",
+"duration": "8 Weeks",
+"level": "Intermediate",
+"thumbnail": "https://img-c.udemycdn.com/course/480x270/756150_c033_4.jpg",
+"video": "https://www.youtube.com/embed/3qBXWUpoPHo",
+"description": "Master Angular framework.",
+"lessons": [
+"Angular Introduction",
+"Components",
+"Services",
+"Routing",
+"Forms",
+"HTTP Requests",
+"Project"
+]
+},
+{
+"id": 12,
+"title": "Vue.js Crash Course",
+"instructor": "Kevin Scott",
+"duration": "5 Weeks",
+"level": "Beginner",
+"thumbnail": "https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg",
+"video": "https://www.youtube.com/embed/qZXt1Aom3Cs",
+"description": "Learn Vue.js basics.",
+"lessons": [
+"Vue Intro",
+"Components",
+"Directives",
+"Router",
+"State Management",
+"Project"
+]
+},
+{
+"id": 13,
+"title": "Docker for Developers",
+"instructor": "Brian Adams",
+"duration": "4 Weeks",
+"level": "Beginner",
+"thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwNLcCUBaC99r3nN10jX1asJQgcmxVzbtkgg&s",
+"video": "https://www.youtube.com/embed/3c-iBn73dDE",
+"description": "Learn containerization with Docker.",
+"lessons": [
+"Docker Basics",
+"Images",
+"Dockerfile",
+"Docker Compose",
+"Deployment"
+]
+},
+{
+"id": 14,
+"title": "Kubernetes Essentials",
+"instructor": "Lisa Turner",
+"duration": "6 Weeks",
+"level": "Intermediate",
+"thumbnail": "https://upload.wikimedia.org/wikipedia/commons/3/39/Kubernetes_logo_without_workmark.svg",
+"video": "https://www.youtube.com/embed/X48VuDVv0do",
+"description": "Learn Kubernetes container orchestration.",
+"lessons": [
+"Kubernetes Basics",
+"Pods",
+"Services",
+"Deployments",
+"Scaling",
+"Project"
+]
+},
+{
+"id": 15,
+"title": "Cyber Security Basics",
+"instructor": "Robert King",
+"duration": "6 Weeks",
+"level": "Beginner",
+"thumbnail": "https://digialert.com/media/k2/items/cache/7acce66d40ec90c2d61987b409cbf850_XL.jpg",
+"video": "https://www.youtube.com/embed/inWWhr5tnEA",
+"description": "Understand cyber threats and security practices.",
+"lessons": [
+"Cybersecurity Overview",
+"Network Security",
+"Threat Detection",
+"Encryption",
+"Policies",
+"Security Tools"
+]
+},
+{
+"id": 16,
+"title": "Ethical Hacking Masterclass",
+"instructor": "James Carter",
+"duration": "9 Weeks",
+"level": "Advanced",
+"thumbnail": "https://d3mxt5v3yxgcsr.cloudfront.net/courses/21573/course_21573_image.jpeg",
+"video": "https://www.youtube.com/embed/3Kq1MIfTWCE",
+"description": "Learn ethical hacking techniques.",
+"lessons": [
+"Intro",
+"Reconnaissance",
+"Network Attacks",
+"Web Attacks",
+"Pen Testing",
+"Reporting"
+]
+},
+{
+"id": 17,
+"title": "C Programming Fundamentals",
+"instructor": "Rahul Verma",
+"duration": "5 Weeks",
+"level": "Beginner",
+"thumbnail": "https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png",
+"video": "https://www.youtube.com/embed/KJgsSFOSQv0",
+"description": "Learn programming basics with C.",
+"lessons": [
+"Introduction",
+"Variables",
+"Control Structures",
+"Functions",
+"Arrays",
+"Pointers"
+]
+},
+{
+"id": 18,
+"title": "C++ Object Oriented Programming",
+"instructor": "Neha Sharma",
+"duration": "7 Weeks",
+"level": "Intermediate",
+"thumbnail": "https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg",
+"video": "https://www.youtube.com/embed/vLnPwxZdW4Y",
+"description": "Learn OOP concepts using C++.",
+"lessons": [
+"OOP Concepts",
+"Classes",
+"Inheritance",
+"Polymorphism",
+"Exception Handling",
+"Project"
+]
+},
+{
+"id": 19,
+"title": "Java Programming Masterclass",
+"instructor": "Vikram Singh",
+"duration": "10 Weeks",
+"level": "Advanced",
+"thumbnail": "https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg",
+"video": "https://www.youtube.com/embed/grEKMHGYyns",
+"description": "Master Java programming.",
+"lessons": [
+"Java Basics",
+"OOP",
+"Collections",
+"Exception Handling",
+"Multithreading",
+"Project"
+]
+},
+{
+"id": 20,
+"title": "Data Structures in Java",
+"instructor": "Ankit Gupta",
+"duration": "8 Weeks",
+"level": "Intermediate",
+"thumbnail": "https://cdn.educba.com/academy/wp-content/uploads/2020/01/data-structure-in-java.jpg",
+"video": "https://www.youtube.com/embed/8hly31xKli0",
+"description": "Learn DSA concepts in Java.",
+"lessons": [
+"Arrays",
+"Linked Lists",
+"Stacks",
+"Queues",
+"Trees",
+"Graphs",
+"Sorting",
+"Project"
+]
+}
+]
+}
